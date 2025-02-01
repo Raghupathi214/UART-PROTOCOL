@@ -1,0 +1,37 @@
+# Compile of Uart_design.sv was successful.
+# Compile of UART_TB.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.uart_tb -voptargs=+acc
+# vsim -gui work.uart_tb -voptargs="+acc" 
+# Start time: 21:11:05 on Jan 31,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vopt-143) Recognized 1 FSM in module "uart_tx(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "uart_rx(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.uart_tb(fast)
+# Loading work.uart_top(fast)
+# Loading work.b_clk(fast)
+# Loading work.uart_tx(fast)
+# Loading work.uart_rx(fast)
+# Loading work.fifo(fast)
+add wave -r /*
+run -all
+# Time:                    0, d_in: 00000000, d_out: xxxxxxxx, wr_en: 0, rd_en: 0, tx_full: x, rx_empty: x
+# Time:                    5, d_in: 00000000, d_out: 00000000, wr_en: 0, rd_en: 0, tx_full: 0, rx_empty: 0
+# Time:                   20, d_in: 10101010, d_out: 00000000, wr_en: 1, rd_en: 0, tx_full: 0, rx_empty: 0
+# Time:                   30, d_in: 10101010, d_out: 00000000, wr_en: 0, rd_en: 0, tx_full: 0, rx_empty: 0
+# 0000000001
+# Time:                   40, d_in: 10101010, d_out: 00000000, wr_en: 0, rd_en: 1, tx_full: 0, rx_empty: 0
+# Time:                   50, d_in: 10101010, d_out: 00000000, wr_en: 0, rd_en: 0, tx_full: 0, rx_empty: 0
+# Time:                   60, d_in: 11001100, d_out: 00000000, wr_en: 1, rd_en: 0, tx_full: 0, rx_empty: 0
+# Time:                   70, d_in: 11001100, d_out: 00000000, wr_en: 0, rd_en: 0, tx_full: 0, rx_empty: 0
+# Time:                   80, d_in: 11001100, d_out: 00000000, wr_en: 0, rd_en: 1, tx_full: 0, rx_empty: 0
+# Time:                   90, d_in: 11001100, d_out: 00000000, wr_en: 0, rd_en: 0, tx_full: 0, rx_empty: 0
+# ** Note: $finish    : S:/Desktop/UART_TB.sv(56)
+#    Time: 110 ns  Iteration: 0  Instance: /uart_tb
+# 1
+# Break in Module uart_tb at S:/Desktop/UART_TB.sv line 56
